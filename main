@@ -122,12 +122,14 @@ body {
 </head>
 <body>
 
+<div id="mainwindow">
+
 <div id="window" class="container">
   <div class="row">
     <div class="column left">
-      <span class="dot" style="background:#ED594A;" onclick=""></span>
-      <span class="dot" style="background:#FDD800;" onclick="reload();"></span>
-      <span class="dot" style="background:#5AC05A;" onclick=""></span>
+      <span class="dot" style="background:#ED594A;" onclick="remove('mainwindow');"></span>
+      <span class="dot" style="background:#FDD800;" onclick="openFullscreen();"></span>
+      <span class="dot" style="background:#5AC05A;" onclick="reload();"></span>
     </div>
     <div class="column middle">
       <input id="myInput" class="input" type="text"></input>
@@ -145,6 +147,7 @@ body {
     <embed id="website" class="website" src="//www.bing.com">
     <button hidden id="go" style="outline: none; background-color: transparent;" onclick="returnText()"></button>
   </div>
+</div>
 </div>
 
 <script type="text/javascript">
@@ -193,10 +196,12 @@ function inputRefresh() {
             let site = document.getElementById('website').getAttribute('src');
             document.getElementById("myInput").value = site
 }
-</script>
 
+function remove(id) {
+    var elem = document.getElementById(id);
+    return elem.parentNode.removeChild(elem);
+}
 
-<script>
 //Make the DIV element draggagle:
 dragElement(document.getElementById("window"));
 
@@ -242,5 +247,6 @@ function dragElement(elmnt) {
 }
 
 </script>
+
 </body>
 </html> 
