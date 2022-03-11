@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<p>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>
+<body>
+<div id="mainwindow">
 <style>
 @keyframes fadeIn {
   0% {
@@ -27,10 +28,6 @@
   }
 }
 
-body {
-  font-family: Arial
-}
-
 * {
   box-sizing: border-box;
 }
@@ -42,8 +39,8 @@ body {
   border-radius: 4px;
   position: absolute;
   z-index: 9;
-  top: 15%;
-  left: 15%;
+  top: 20%;
+  left: 10%;
 }
 
 .row {
@@ -139,16 +136,10 @@ body {
 }
 
 .close {
-    animation: fadeOut 0.1s forwards;
+    animation: fadeOut 0.05s forwards;
 }
 
 </style>
-</head>
-<body>
-
-<p>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/>windowtestwindowtestwindowtestwindowtest<br/></p>
-
-<div id="mainwindow">
 
 <div id="window" class="container">
   <div class="row">
@@ -170,7 +161,7 @@ body {
   </div>
 
   <div class="content" style="background:#ffffff;">
-    <embed id="website" class="website" src="//www.bing.com">
+    <embed id="website" class="website" src="">
     <button hidden id="go" style="outline: none; background-color: transparent;" onclick="returnText()"></button>
   </div>
 </div>
@@ -225,7 +216,7 @@ function inputRefresh() {
 function remove(id) {
     var elem = document.getElementById(id);
     elem.classList.add('close');
-    setTimeout("return elem.parentNode.removeChild(elem)", 100);
+    setTimeout(() => {return elem.parentNode.removeChild(elem);}, 50);
 }
 
 //Make the DIV element draggagle:
